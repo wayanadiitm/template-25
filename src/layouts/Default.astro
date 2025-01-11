@@ -22,5 +22,18 @@ const { title, description, classList, pageTitle, ogImage } = Astro.props;
     <BaseNavigation {pageTitle} />
     <slot />
     <BaseFooter />
+<script>
+  function toggleAccordion(id) {
+    const content = document.getElementById(id);
+    const icon = document.getElementById(`icon-${id}`);
+    if (content.classList.contains("hidden")) {
+      content.classList.remove("hidden");
+      icon.textContent = "-";
+    } else {
+      content.classList.add("hidden");
+      icon.textContent = "+";
+    }
+  }
+</script>
   </body>
 </html>
