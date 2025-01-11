@@ -6,7 +6,7 @@ export default defineConfig({
   // used to generate images
   site: 'https://wayanadiitm.github.io',
   base: 'template-25',
-  //trailingSlash: 'ignore',
+  trailingSlash: 'ignore',
   integrations: [sitemap(), UnoCSS({ injectReset: true })],
   vite: {
     optimizeDeps: {
