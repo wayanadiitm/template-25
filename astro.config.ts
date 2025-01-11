@@ -6,7 +6,7 @@ export default defineConfig({
   // used to generate images
   site:
     process.env.VERCEL_ENV === 'production'
-      ? 'https://wayanadiitm.github.io/template-25'
+      ? 'https://wayanadiitm.github.io'
       : process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}/`
       : 'https://localhost:3000/',
