@@ -11,7 +11,7 @@ interface Props {
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 if (Astro.props.ogImage === undefined) {
-  Astro.props.ogImage = new URL('/v1/generate/og/default.png', Astro.url);
+  Astro.props.ogImage = new URL('https://wayanadiitm.github.io/logicloom3/textlogo_new.png', Astro.url);
 }
 
 const { title, description, ogImage } = Astro.props;
@@ -19,9 +19,13 @@ const { title, description, ogImage } = Astro.props;
 
 <head>
   <LocalFont />
-  <meta charset='utf-8' />
-  <meta name='viewport' content='width=device-width, initial-scale=1' />
-  <meta name='generator' content={Astro.generator} />
+<html lang="en">
+<meta charset="utf-8" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="google" content="notranslate" />
+<meta content="logicloom,logic,ai,ml,coding,aptitude,criticalthinking,outofthebox,learning,contest,iitm,paradox,offline,campus" name="keywords">
+<meta name='generator' content={Astro.generator} />
 
   <link
     rel='alternate'
@@ -29,7 +33,7 @@ const { title, description, ogImage } = Astro.props;
     type='application/rss+xml'
   />
 
-  <meta name='title' content={`Brutal Theme | ${title}`} />
+  <meta name='title' content={`LogicLooM 4.0 | ${title}`} />
   <meta name='description' content={description} />
 
   <meta property='og:type' content='website' />
@@ -45,9 +49,9 @@ const { title, description, ogImage } = Astro.props;
   <meta property='twitter:image' content={ogImage} />
 
   <link rel='canonical' href={canonicalURL} />
-  <link rel='icon' type='image/svg' href='/favicon.svg' />
+  <link rel='icon' type='image/svg' href='/template-25/favicon.svg' />
 
-  <title>Brutal Theme | {title}</title>
+  <title>LogicLooM 4.0 | {title}</title>
 
   <ViewTransitions />
 
