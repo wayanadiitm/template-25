@@ -1,6 +1,6 @@
 ---
-title: Blogpost 1
-pubDate: 11/09/2022 14:25
+title: Prelims
+pubDate: 12/01/2025 13:03
 author: "Elian Van Cutsem"
 tags:
   - JavaScript
