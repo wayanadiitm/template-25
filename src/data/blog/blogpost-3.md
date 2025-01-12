@@ -1,7 +1,7 @@
 ---
-title: Blogpost 3
+title: ML Challenge
 description: Lorem markdownum longo os thyrso telum, continet servat fetus nymphae, vox nocte sedesque, decimo. Omnia esse, quam sive; conplevit illis indestrictus admovit dedit sub quod protectus, impedit non.
-pubDate: 2023-02-14 23:49
+pubDate: 12/01/2025 13:01
 author: Elian Van Cutsem
 tags: 
   - CSS
