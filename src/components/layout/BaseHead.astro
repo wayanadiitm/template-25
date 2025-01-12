@@ -5,12 +5,12 @@ import { ViewTransitions } from 'astro:transitions';
 interface Props {
   title: string;
   description: string;
-  ogImage?: URL;
+  ogImage: string;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-Astro.props.ogImage = new URL('https://wayanadiitm.github.io/template-25/textlogo.png', 'https://wayanadiitm.github.io/template-25/');
+Astro.props.ogImage = new URL('https://wayanadiitm.github.io/template-25/textlogo.png', Astro.url);
 
 const { title, description, ogImage } = Astro.props;
 ---
