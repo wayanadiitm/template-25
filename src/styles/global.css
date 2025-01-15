@@ -119,3 +119,11 @@ html {
 {
   background-color: aliceblue;
 }
+#hamburger-btn:hover i {
+  transform: scale(1.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+#hamburger-btn:active i {
+  transform: rotate(90deg);
+}
