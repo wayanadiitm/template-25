@@ -59,10 +59,36 @@ const { pageTitle } = Astro.props;
       }
     </ul>
   </nav>
-  <nav class='md:hidden flex'>
+  <nav class='md:hidden fixed inset-0 bg-white z-50 p-6 transform translate-x-full transition-transform duration-300' id='mobile-menu'>
     <h2 class='hidden'>Mobile Navigation</h2>
-    <ul>
-      <li><a href='/template-25/blog/'>Blog</a></li>
+    <ul class='flex flex-col gap-6 poppins'>
+      {
+        navigationItems.map((item) => (
+          <li>
+            <a
+              class='text-lg font-medium hover:text-green hover:underline transition-all duration-150 ease-in-out'
+              href={item.url} target={item.target}
+              title={`Go to ${item.name}`}
+            >
+              {item.name}
+            </a>
+          </li>
+        ))
+      }
+      {
+        socialIcons.map((item) => (
+          <li>
+            <a
+              href={item.url}
+              class='hover:text-green hover:underline transition-all duration-150 ease-in-out'
+              target='_blank'
+              title={`'See @ElianCodes on ${item.name}`}
+            >
+              <div class:list={[item.icon, 'w-6 h-6']} />
+            </a>
+          </li>
+        ))
+      }
     </ul>
-  </nav>
+  </nav>  
 </header>
