@@ -82,6 +82,21 @@ const { backToTop = false } = Astro.props;
   }
 </script>
 <script language=JavaScript>
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+const closeBtn = document.getElementById('close-btn');
+
+  hamburgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('translate-x-full');
+    mobileMenu.classList.toggle('translate-x-0');
+  });
+
+closeBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('translate-x-full');
+  mobileMenu.classList.toggle('translate-x-0');
+});
+</script>
+<script language=JavaScript>
 var message="Function Disabled!";
 
 function clickIE4(){
