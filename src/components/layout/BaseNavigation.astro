@@ -50,7 +50,7 @@ const { pageTitle } = Astro.props;
               href={item.url}
               class='hover:text-green hover:underline transition-all duration-150 ease-in-out'
               target='_blank'
-              title={`'See @ElianCodes on ${item.name}`}
+              title={`Join us on ${item.name}`}
             >
               <div class:list={[item.icon, 'w-6 h-6']} />
             </a>
@@ -59,12 +59,11 @@ const { pageTitle } = Astro.props;
       }
     </ul>
   </nav>
-  <button class='md:hidden flex items-center justify-center p-2 border rounded-md' id='hamburger-btn'>
-    <span class='w-6 h-1 bg-black mb-1'></span>
-    <span class='w-6 h-1 bg-black mb-1'></span>
-    <span class='w-6 h-1 bg-black'></span>
-  </button>
+  <button class='md:hidden flex items-center justify-center p-2 border rounded-md' id='hamburger-btn'><i class='fa fa-bars' aria-hidden='true'></i></button>
   <nav class='md:hidden fixed inset-0 bg-white z-50 p-6 transform translate-x-full transition-transform duration-300' id='mobile-menu'>
+  <button id='close-btn' class='absolute top-4 right-4 p-2 text-xl'>
+    <i class='fa fa-times' aria-hidden='true'></i>
+  </button>
     <h2 class='hidden'>Mobile Navigation</h2>
     <ul class='flex flex-col gap-6 poppins'>
       {
@@ -87,7 +86,7 @@ const { pageTitle } = Astro.props;
               href={item.url}
               class='hover:text-green hover:underline transition-all duration-150 ease-in-out'
               target='_blank'
-              title={`'See @ElianCodes on ${item.name}`}
+              title={`Join us on ${item.name}`}
             >
               <div class:list={[item.icon, 'w-6 h-6']} />
             </a>
@@ -100,9 +99,15 @@ const { pageTitle } = Astro.props;
 <script language=JavaScript>
   const hamburgerBtn = document.getElementById('hamburger-btn');
   const mobileMenu = document.getElementById('mobile-menu');
+const closeBtn = document.getElementById('close-btn');
 
   hamburgerBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('translate-x-full');
     mobileMenu.classList.toggle('translate-x-0');
   });
+
+closeBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('translate-x-full');
+  mobileMenu.classList.toggle('translate-x-0');
+});
 </script>
