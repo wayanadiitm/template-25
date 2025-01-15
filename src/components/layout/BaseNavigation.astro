@@ -23,8 +23,9 @@ const { pageTitle } = Astro.props;
 
 <header class='border-b-4 border-black flex justify-between p-6 items-center'>
   {pageTitle && <h1 class='hidden'>{pageTitle}</h1>}
-  <a href='/template-25' title='Home'>
-    <p class='righteous md:text-5xl'><img src='/template-25/favicon.PNG' width='50' height='50'> LogicLooM 4.0</p>
+  <a href='/template-25' title='Home' style='display: inline-flex; align-items: center;'>
+<img src='/template-25/favicon.PNG' width='50' height='50' style='margin-right: 10px;'>
+    <p class='righteous md:text-5xl' style='margin: 0;'>LogicLooM 4.0</p>
   </a>
   <nav class='hidden md:inline-block'>
     <h2 class='hidden'>Navigation</h2>
