@@ -7,10 +7,11 @@ import { Button } from '@eliancodes/brutal-ui';
 import { Card } from '@eliancodes/brutal-ui';
 
 const crewMembers = [
-  { name: 'Somsubhra De', role: 'Lead Organizer', image: 'path_to_image.jpg', bio: 'Passionate about tech and community.' },
-  { name: 'Advait Vats', role: 'Co-Organizer', image: 'path_to_image2.jpg', bio: 'Loves coding and solving problems.' },
-  { name: 'Sayan Bhowmick', role: 'Organizer', image: 'path_to_image3.jpg', bio: 'Enthusiastic about tech, and helping others grow.' },
-  { name: 'TBU', role: 'Advisory Committee', image: 'path_to_image4.jpg', bio: 'To Be Updated.' }
+  { name: 'Somsubhra De', role: 'Core', image: 'https://wayanadiitm.github.io/ml/events/logicloom1/assets/img/team/sd07.PNG', bio: '' },
+  { name: 'Advait Vats', role: 'Core', image: 'https://wayanadiitm.github.io/ml/events/logicloom1/assets/img/team/av2.PNG', bio: '' },
+  { name: 'Sayan Bhowmick', role: '', image: 'https://wayanadiitm.github.io/ml/assets/images/team/sb2.PNG', bio: '' },
+  { name: 'Anirban Mandal', role: 'Sponsorship', image: 'https://wayanadiitm.github.io/ml/assets/images/team/am.PNG', bio: '' },
+  { name: 'Goutham Madineni', role: '', image: 'https://wayanadiitm.github.io/ml/events/logicloom1/assets/img/team/gm2.PNG', bio: '' }
 ];
 ---
 
@@ -24,7 +25,7 @@ const crewMembers = [
     {crewMembers.map((member) => (
       <div class="relative flex justify-center items-center" key={member.name}>
         <Card class="overflow-hidden shadow-lg rounded-lg w-full h-full p-4 hover:scale-105 transition-transform duration-300 ease-in-out">
-          <img src={member.image} alt={member.name} class="w-32 h-32 rounded-full object-cover mx-auto -mt-16 mb-4 shadow-xl" />
+          <img src={member.image} alt={member.name} class="w-32 h-32 rounded-full object-cover mx-auto -mt-16 mb-4 shadow-xl grayscale" />
           <h3 class="text-xl text-center font-semibold">{member.name}</h3>
           <p class="text-center text-gray-600 mt-2">{member.role}</p>
           <p class="text-center text-gray-600 mt-2">{member.bio}</p>
