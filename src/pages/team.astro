@@ -5,6 +5,13 @@ import MobileSocials from '@components/home/MobileSocials.astro';
 import { Pill } from '@eliancodes/brutal-ui';
 import { Button } from '@eliancodes/brutal-ui';
 import { Card } from '@eliancodes/brutal-ui';
+
+const crewMembers = [
+  { name: 'Somsubhra De', role: 'Lead Organizer', image: 'path_to_image.jpg', bio: 'Passionate about tech and community.' },
+  { name: 'Advait Vats', role: 'Co-Organizer', image: 'path_to_image2.jpg', bio: 'Loves coding and solving problems.' },
+  { name: 'Sayan Bhowmick', role: 'Organizer', image: 'path_to_image3.jpg', bio: 'Enthusiastic about tech, and helping others grow.' },
+  { name: 'TBU', role: 'Advisory Committee', image: 'path_to_image4.jpg', bio: 'To Be Updated.' }
+];
 ---
 
 <Layout
@@ -13,48 +20,18 @@ import { Card } from '@eliancodes/brutal-ui';
   description='Welcome to LogicLooM, the most celebrated technical event at Paradox, the annual flagship techno-cultural fest for IIT Madras BS students'
 >
 <main class="bg-pink p-6">
-  <section id="about" class="grid md:grid-cols-3 lg:grid-cols-4 gap-8 mt-4">
-    
-    <!-- Example Crew Member -->
-    <div class="relative flex justify-center items-center">
-      <Card class="overflow-hidden shadow-lg rounded-lg w-full md:w-80 p-4 hover:scale-105 transition-transform duration-300 ease-in-out">
-        <img src="path_to_image.jpg" alt="Somsubhra De" class="w-32 h-32 rounded-full object-cover mx-auto -mt-16 mb-4 shadow-xl" />
-        <h3 class="text-xl text-center font-semibold">Somsubhra De</h3>
-        <p class="text-center text-gray-600 mt-2">Lead Organizer</p>
-        <button class="mt-4 text-center text-pink-600 hover:text-pink-800 transition-all duration-300">View More</button>
-      </Card>
-    </div>
-
-    <!-- Example Crew Member -->
-    <div class="relative flex justify-center items-center">
-      <Card class="overflow-hidden shadow-lg rounded-lg w-full md:w-80 p-4 hover:scale-105 transition-transform duration-300 ease-in-out">
-        <img src="path_to_image2.jpg" alt="Advait Vats" class="w-32 h-32 rounded-full object-cover mx-auto -mt-16 mb-4 shadow-xl" />
-        <h3 class="text-xl text-center font-semibold">Advait Vats</h3>
-        <p class="text-center text-gray-600 mt-2">Co-Organizer</p>
-        <button class="mt-4 text-center text-pink-600 hover:text-pink-800 transition-all duration-300">View More</button>
-      </Card>
-    </div>
-
-    <!-- Example Crew Member -->
-    <div class="relative flex justify-center items-center">
-      <Card class="overflow-hidden shadow-lg rounded-lg w-full md:w-80 p-4 hover:scale-105 transition-transform duration-300 ease-in-out">
-        <img src="path_to_image3.jpg" alt="Sayan Bhowmick" class="w-32 h-32 rounded-full object-cover mx-auto -mt-16 mb-4 shadow-xl" />
-        <h3 class="text-xl text-center font-semibold">Sayan Bhowmick</h3>
-        <p class="text-center text-gray-600 mt-2">Organizer</p>
-        <button class="mt-4 text-center text-pink-600 hover:text-pink-800 transition-all duration-300">View More</button>
-      </Card>
-    </div>
-
-    <!-- Example Advisory Committee Member -->
-    <div class="relative flex justify-center items-center">
-      <Card class="overflow-hidden shadow-lg rounded-lg w-full md:w-80 p-4 hover:scale-105 transition-transform duration-300 ease-in-out">
-        <img src="path_to_image4.jpg" alt="TBU" class="w-32 h-32 rounded-full object-cover mx-auto -mt-16 mb-4 shadow-xl" />
-        <h3 class="text-xl text-center font-semibold">Advisory Committee</h3>
-        <p class="text-center text-gray-600 mt-2">To Be Updated.</p>
-        <button class="mt-4 text-center text-pink-600 hover:text-pink-800 transition-all duration-300">View More</button>
-      </Card>
-    </div>
-    
+  <section id="about" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 mt-4">
+    {crewMembers.map((member) => (
+      <div class="relative flex justify-center items-center" key={member.name}>
+        <Card class="overflow-hidden shadow-lg rounded-lg w-full h-full p-4 hover:scale-105 transition-transform duration-300 ease-in-out">
+          <img src={member.image} alt={member.name} class="w-32 h-32 rounded-full object-cover mx-auto -mt-16 mb-4 shadow-xl" />
+          <h3 class="text-xl text-center font-semibold">{member.name}</h3>
+          <p class="text-center text-gray-600 mt-2">{member.role}</p>
+          <p class="text-center text-gray-600 mt-2">{member.bio}</p>
+          <button class="mt-4 text-center text-pink-600 hover:text-pink-800 transition-all duration-300">View More</button>
+        </Card>
+      </div>
+    ))}
   </section>
 </main>
 </Layout>
