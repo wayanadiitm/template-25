@@ -23,7 +23,7 @@ const Speakers = [
         Distinguished Speakers
       </h2>
     {Speakers.map((speaker) => (
-      <div class="relative flex justify-center items-center" key={member.name}>
+      <div class="relative flex justify-center items-center" key={speaker.name}>
         <Card class="overflow-hidden shadow-lg rounded-lg w-full h-full p-4 hover:scale-105 transition-transform duration-300 ease-in-out">
           <img src={speaker.image} alt={speaker.name} class="w-32 h-32 rounded-full object-cover mx-auto -mt-16 mb-4 shadow-xl grayscale" />
           <h3 class="text-xl text-center font-semibold">{speaker.name}</h3>
